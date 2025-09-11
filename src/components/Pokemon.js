@@ -1,4 +1,4 @@
-import axios from "axios";
+import api from '../api/api'
 import { useEffect, useState } from "react";
 import { ActivityIndicator, FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
@@ -18,7 +18,12 @@ export default function Pokemon(){
         setError(null)
 
         try {
-            const res = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${refresh ? 0 : offset}&limit=${LIMIT}`)
+            const res = await api.get(`/pokemon`, {
+            params: {
+            offset: refresh ? 0 : offset,
+            limit: LIMIT,
+              },
+            });
             const data = res.data.results.map(item => {
                 const id = item.url.split("/").filter(Boolean).pop()
                 return{
