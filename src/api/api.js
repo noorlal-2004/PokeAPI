@@ -1,8 +1,9 @@
-import axios from "axios"
+import axios from "axios";
+import { API_BASE_URL } from "../config/env";
 
 const api = axios.create({
-  baseURL: "https://pokeapi.co/api/v2",
-  method: "GET", 
+  baseURL: API_BASE_URL,
+  method: "GET",
 });
 
 export default api;

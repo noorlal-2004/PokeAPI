@@ -1,14 +1,6 @@
 import api from "../api/api";
 import { useEffect, useState } from "react";
-import {
-  ActivityIndicator,
-  FlatList,
-  Image,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import {ActivityIndicator, FlatList, Image, StyleSheet, Text, TouchableOpacity, View} from "react-native";
 
 export default function Pokemon() {
   const [pokemon, setPokemon] = useState([]);

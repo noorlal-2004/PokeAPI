@@ -1,6 +1,7 @@
-import Pokemon from "../src/components/Pokemon"
+import Characters from "../src/screens/Characters"
+
 export default function Index() {
   return (
-    <Pokemon/>
+    <Characters/>
   );
 }
